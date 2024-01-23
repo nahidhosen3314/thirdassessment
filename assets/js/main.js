@@ -39,9 +39,10 @@ $(function(){
     })
 
 
+
       // accoridion
       $('.a-content').hide();
-      $('.accordion-item').first().children('.a-content').show();
+      $('.accordion-item').first().addClass('active').children('.a-content').show();
       $(".a-title").on("click", function(){
           $(this).parent().siblings().removeClass("active").children(".a-content").slideUp();
           $(this).parent().toggleClass("active").children(".a-content").slideToggle();
