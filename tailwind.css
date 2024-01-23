@@ -1,0 +1,304 @@
+/* @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;800&display=swap'); */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    body{
+        @apply text-paragraph font-primary;
+    }
+    h1,h2,h3,h4,h5,h6{
+        @apply font-extrabold text-heading;
+    }
+    h1{
+        @apply text-5xl;
+    }
+    h2{
+        @apply text-4xl;
+    }
+    h3{
+        @apply text-3xl;
+    }
+    h4{
+        @apply text-2xl;
+    }
+    h5{
+        @apply text-xl;
+    }
+    h6{
+        @apply text-lg;
+    }
+    p{
+        @apply font-medium md:text-base text-sm leading-6 text-paragraph;
+    }
+    input, textarea {
+        @apply w-full p-4 rounded-xl outline-none focus-visible:outline-none bg-[#a7a7a71a];
+    }
+    a{
+        @apply inline-block;
+    }
+    label{
+        @apply w-full;
+    }
+    li{
+        @apply font-medium md:text-base text-sm leading-6 text-paragraph cursor-pointer;
+    }
+}
+
+@layer components{
+    button{
+        @apply px-12 py-4 rounded-lg text-xl font-semibold inline-block;
+    }
+    .btn{
+        @apply md:px-6 px-4 md:py-4 py-3 rounded-lg text-xl font-bold inline-block;
+    }
+    .btn-primary{
+        @apply text-white bg-primary hover:shadow-lg;
+    }
+    .btn-secondary{
+        @apply text-white bg-secondary;
+    }
+}
+
+/* slider */
+
+
+.author .owl-nav button {
+    @apply h-10 w-10 !bg-black !text-white flex items-center justify-center rounded-full mr-3 hover:shadow-2xl;
+}
+
+.author .owl-nav{
+    @apply flex absolute sm:bottom-6 sm:left-6 left-0  bottom-8 justify-center md:justify-start w-full md:w-auto;
+}
+
+
+.footers li, p {
+    @apply text-[#8d8d8d];
+}
+.footers li {
+    @apply mb-3;
+}
+
+/* .author .owl-nav {
+	position: absolute;
+	bottom: 12px;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+} */
+
+
+
+
+
+/* .author .owl-nav {
+	display: flex;
+	justify-content: space-between;
+	color: rgb(255, 0, 0);
+	font-size: 24px;
+	top: 50% !important;
+	position: absolute;
+	left: 12px;
+	right: 12px;
+	transform: translateY(-50px);
+} */
+
+/* .author .owl-dots .owl-dot {
+	height: 4px;
+	width: 40px;
+	background: #707070 !important;
+	margin: 4px;
+	display: inline-block;
+}
+
+.author .owl-dot.active {
+	background: #ffffff !important;
+} */
+
+/* .author .owl-dots {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: -76px;
+	position: relative;
+} */
+/* ...... accroding ..... */
+.a-title:before {
+    content: "";
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="20" height="20" viewBox="0 0 2048 2048"%3E%3Cpath fill="black" d="M1920 896v128h-896v896H896v-896H0V896h896V0h128v896z"%2F%3E%3C%2Fsvg%3E');
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2.5rem;
+    width: 2.5rem;
+    cursor: pointer;
+    border-radius: 9999px;
+    --tw-border-opacity: 1;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    padding: .75rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .3s;
+}
+.a-title {
+	position: relative;
+	padding-right: 3rem;
+}
+
+/* .accordion-item {
+	background: #d1d1d1;
+	padding: 16px 18px;
+	border-radius: 8px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid;
+} */
+
+.accordion-item {
+	/* padding: 16px 18px; */
+	margin-bottom: 20px;
+	border-bottom: 1px solid #13131860;
+	padding-bottom: 23px;
+}
+
+.accordion-item:last-child {
+	border: none;
+}
+
+.a-content {
+	margin-top: 16px;
+}
+
+.accordion-item.active .a-title::before {
+	content: "";
+	background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="20" height="20" viewBox="0 0 15 15"%3E%3Cpath fill="none" stroke="black" d="M1 7.5h13"%2F%3E%3C%2Fsvg%3E');
+}
+
+
+/* ------------- Menu ----------------- */
+
+.menu-bar.active span:nth-child(1) {
+	transform: rotate(45deg) translateX(7px) translateY(5px);
+    transition: all .5s;
+}
+
+.menu-bar.active span:nth-child(2) {
+	opacity: 0;
+    transition: all .5s;
+}
+
+.menu-bar.active span:nth-child(3) {
+	transform: rotate(-45deg) translateX(6px) translateY(-4px);
+    transition: all .5s;
+}
+
+
+
+.mobile-menu {
+	/* position: absolute; */
+	left: -300px;
+	width: 300px;
+	background: #fff;
+	z-index: 1;
+	transition: all .5s;
+	max-height: 100%;
+	overflow-y: auto;
+}
+
+.mobile-menu.active {
+    left: 0;
+    transition: all .5s;
+}
+ 
+/* ------- something wrong -------- */
+
+.mobile-menu-wrappar {
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	backdrop-filter: blur(14px);
+	width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+}
+
+body.menu-active .mobile-menu-wrappar {
+    opacity: 1;
+    visibility: visible;
+    transition: all .5s;
+}
+
+body.menu-active {
+	overflow: hidden;
+}
+
+.mobile-menu li{
+    margin-bottom: 8px;
+}
+
+/* ................................. */
+
+.circle_percent {font-size:120px; width:1em; height:1em; position: relative; background: #eee; border-radius:50%; overflow:hidden; display:inline-block; margin:0px;}
+.circle_inner {position: absolute; left: 0; top: 0; width: 1em; height: 1em; clip:rect(0 1em 1em .5em);}
+.round_per {position: absolute; left: 0; top: 0; width: 1em; height: 1em; background: #4C8DF1; clip:rect(0 1em 1em .5em); transform:rotate(180deg); transition:1.05s;}
+.percent_more .circle_inner {clip:rect(0 .5em 1em 0em);}
+.percent_more:after {position: absolute; left: .5em; top:0em; right: 0; bottom: 0; background: #4C8DF1; content:'';}
+.circle_inbox {position: absolute; top: 10px; left: 10px; right: 10px; bottom: 10px; background: #fff; z-index:3; border-radius: 50%;}
+.percent_text {position: absolute; font-size: 30px; color: #131318; left: 50%; top: 50%; font-weight: 900; transform: translate(-50%,-50%); z-index: 3;}
+
+
+.progress-item:nth-child(1) .round_per,
+.progress-item:nth-child(1) .percent_more::after {
+	background: #FF4240;
+}
+.progress-item:nth-child(2) .round_per,
+.progress-item:nth-child(2) .percent_more::after {
+	background: #49D293;
+}
+.progress-item:nth-child(3) .round_per,
+.progress-item:nth-child(3) .percent_more::after {
+	background: #FFB546;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (min-width:767px){
+    .mobile-menu-wrappar {
+        display: none !important;
+    }
+    body{
+        overflow: visible !important;
+    }
+}
+
+
+.counter {
+    animation-duration: 1s;
+    animation-delay: 0s;
+  }
